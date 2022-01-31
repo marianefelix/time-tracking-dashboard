@@ -1,9 +1,9 @@
 const statOptionsElements = document.querySelectorAll('a');
 
-const clearLinks = () => {
-    statOptionsElements.forEach((linkElement) => {
-        linkElement.classList.remove('active');
-    });
+const clearPreviousLink = () => {
+    const activeLink = document.getElementsByClassName('active')[0];
+
+    activeLink.removeAttribute('class');
 }
 
 const getActiveLink = () => {
@@ -24,8 +24,8 @@ const setDailyOption = () => {
 const addEventListenerToLinks = () => {
     statOptionsElements.forEach((linkElement) => {
         linkElement.addEventListener('click', (event) => {
-            clearLinks();
-            linkElement.classList.add('active');
+            clearPreviousLink();
+            linkElement.setAttribute('class', 'active');
         })
     })
 
