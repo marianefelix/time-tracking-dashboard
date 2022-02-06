@@ -73,13 +73,42 @@ main .stats-options .view-options {
 main .stats.card {
     padding-top: 2.5rem;
 
-    background-color: var(--light-orange);
-    background-image: url('/images/icon-work.svg');
     background-repeat: no-repeat;
     background-position-y: -10%;
     background-position-x: 90%;
 
     cursor: pointer;
+}
+
+#work {
+    background-image: url('/images/icon-work.svg');
+    background-color: var(--light-orange);
+}
+
+#play {
+    background-image: url('/images/icon-play.svg');
+    background-color: var(--soft-blue);
+}
+
+#study {
+    background-image: url('/images/icon-study.svg');
+    background-color: var(--light-red);
+
+}
+
+#exercise {
+    background-image: url('/images/icon-exercise.svg');
+    background-color: var(--lime-green);
+}
+
+#social {
+    background-image: url('/images/icon-social.svg');
+    background-color: var(--violet);
+}
+
+#self-care {
+    background-image: url('/images/icon-self-care.svg');
+    background-color: var(--soft-yellow);
 }
 
 .stats .timeframe {
