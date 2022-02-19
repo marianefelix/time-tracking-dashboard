@@ -5,6 +5,15 @@
     font-family: 'Rubik', sans-serif;
 }
 
+html, body, #root {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    background-color: var(--very-dark-blue);
+}
+
 :root {
     /* colors */
     --blue: hsl(246, 80%, 60%);
@@ -26,16 +35,4 @@
     --bold: 500;
 
     --card-border-radius: 12px;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-
-    padding: 2rem;
-
-    background-color: var(--very-dark-blue);
 }
