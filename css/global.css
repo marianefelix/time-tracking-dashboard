@@ -10,8 +10,17 @@ html, body, #root {
 }
 
 body {
-    display: flex;
     background-color: var(--very-dark-blue);
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 1rem;
+    }
 }
 
 :root {

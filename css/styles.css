@@ -1,9 +1,11 @@
 main {
     width: 100%;
+    height: 25rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1.5rem;
 
     color: white;
 }
@@ -12,16 +14,24 @@ main .card {
     border-radius: var(--card-border-radius);
 }
 
-main .stats-options.card {
+main .stats-options {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
     background-color: var(--dark-blue);
 }
 
 main .stats-options .profile {
+    height: 70%;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
 
     padding: 1.5rem;
-
     background-color: var(--blue);
 }
 
@@ -32,26 +42,26 @@ main .stats-options .profile {
     background-color: white;
     border: 2px solid white;
     border-radius: 50%;
-
-    margin-right: 1rem;
 }
 
 .profile p {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--pale-blue);
 
     margin-bottom: 0.3rem;
 }
 
 .profile h3 {
+    font-size: 28px;
     font-weight: var(--light);
 }
 
 main .stats-options .view-options {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 1rem;
 
-    padding: 1rem 0;
+    padding: 1.2rem;
 }
 
 .view-options a {
@@ -71,8 +81,9 @@ main .stats-options .view-options {
 }
 
 main .stats.card {
-    padding-top: 2.5rem;
+    min-height: 8rem;
 
+    display: flex;
     background-repeat: no-repeat;
     background-position-y: -10%;
     background-position-x: 90%;
@@ -112,6 +123,14 @@ main .stats.card {
 }
 
 .stats .timeframe {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+
     padding: 1.2rem;
 
     background-color: var(--dark-blue);
@@ -122,14 +141,10 @@ main .stats.card {
     background-color: #34397B;
 }
 
-.stats .timeframe > div {
+.stats .timeframe > div:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.stats .timeframe > div:first-child {
-    margin-bottom: 0.5rem;
 }
 
 .stats .timeframe .title {
@@ -143,8 +158,6 @@ main .stats.card {
     background-color: transparent;
     border: 0;
     cursor: pointer;
-
-    padding: 0.5rem 0;
 }
 
 .timeframe button img {
@@ -152,10 +165,50 @@ main .stats.card {
 }
 
 .timeframe .current {
+    font-size: 2.5rem;
     font-weight: var(--light);
 }
 
 .timeframe .previous {
     color: var(--pale-blue);
     font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        height: 100%;
+        padding: 1.5rem;
+    }
+
+    main .stats-options .profile {
+        flex-direction: row;
+        align-items: center;
+
+        column-gap: 1.2rem;
+    }
+
+    .profile h3 {
+        font-size: 17px;
+    }
+
+    main .stats-options .view-options {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main .stats .timeframe > div:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .timeframe .current {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    main {
+        grid-template-columns: repeat(4, 12rem);
+    }
 }
