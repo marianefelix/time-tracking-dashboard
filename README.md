@@ -34,7 +34,7 @@ Users should be able to:
 #### Desktop 770x630
 ![](./.github/desktop-770x630.png)
 
-#### Desktop 400x630
+#### Mobile 400x630
 ![](./.github/mobile-400x630.png)
 
 ### Links
