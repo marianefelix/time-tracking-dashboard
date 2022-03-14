@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Time Tracking Dashboard](time-tracking-dashboard-brown.vercel.app)
+- Live Site URL: [Time Tracking Dashboard](https://time-tracking-dashboard-brown.vercel.app/#daily)
 
 ## My process
 
